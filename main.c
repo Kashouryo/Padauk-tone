@@ -54,29 +54,27 @@ void main(void)
 //    tonePA3(1,2);
 
     //Music from an indoor water ride
-    tonePA3(11,2);
+    tonePA3(11,3);
     tonePA3(11,8);
     tonePA3(13,4);
     tonePA3(11,4);
-    tonePA3(12,2);
+    tonePA3(12,3);
     tonePA3(12,8);
-    tonePA3(12,4);
-    _delay_ms(250);
-
     tonePA3(12,2);
+
+    tonePA3(12,3);
     tonePA3(12,8);
     tonePA3(14,4);
     tonePA3(12,4);
-    tonePA3(13,2);
+    tonePA3(13,3);
     tonePA3(13,8);
-    tonePA3(13,4);
-    _delay_ms(250);
-
     tonePA3(13,2);
+
+    tonePA3(13,3);
     tonePA3(13,8);
     tonePA3(15,4);
     tonePA3(13,4);
-    tonePA3(14,2);
+    tonePA3(14,3);
     tonePA3(14,8);
     tonePA3(14,4);
 
