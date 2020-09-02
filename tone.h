@@ -29,6 +29,70 @@
 #define tone_b5 (uint8_t)(TM2S_SCALE_DIV20)|TM2S_PRESCALE_NONE
 #define tone_c6 (uint8_t)(TM2S_SCALE_DIV19)|TM2S_PRESCALE_NONE
 
+//stop the note
+void noTone(void){
+    TM2C = 0x00; PA |= (1<<BUZZER_BIT);
+}
+
+//delayless tone. you have to count the time by your self!
+void tonePA3ND(uint8_t note){
+    TM2B = 0x7F;
+    switch(note){
+    case 1:
+        TM2S = tone_c4;
+        break;
+    case 2:
+        TM2S = tone_d4;
+        break;
+    case 3:
+        TM2S = tone_e4;
+        break;
+    case 4:
+        TM2S = tone_f4;
+        break;
+    case 5:
+        TM2S = tone_g4;
+        break;
+    case 6:
+        TM2S = tone_a4;
+        break;
+    case 7:
+        TM2S = tone_b4;
+        break;
+    case 8:
+        TM2S = tone_c5;
+        break;
+    case 11:
+        TM2S = tone_c5;
+        break;
+    case 12:
+        TM2S = tone_d5;
+        break;
+    case 13:
+        TM2S = tone_e5;
+        break;
+    case 14:
+        TM2S = tone_f5;
+        break;
+    case 15:
+        TM2S = tone_g5;
+        break;
+    case 16:
+        TM2S = tone_a5;
+        break;
+    case 17:
+        TM2S = tone_b5;
+        break;
+    case 18:
+        TM2S = tone_c6;
+        break;
+    default:
+        break;
+    }
+    TM2C = (uint8_t)(TM2C_INVERT_OUT | TM2C_MODE_PWM | TM2C_OUT_PA3 | TM2C_CLK_IHRC);
+}
+
+//standard tone, we count the time for you in a blocking way
 void tonePA3(uint8_t note,uint8_t time){
     TM2B = 0x7F; // Set the PWM duty value (127+1) = 50%
     switch(note){
@@ -109,6 +173,7 @@ void tonePA3(uint8_t note,uint8_t time){
     _delay_ms(5);
 }
 
+//Like regular tone, but in slur
 void tonePA3Slur(uint8_t note,uint8_t time){
     TM2B = 0x7F; // Set the PWM duty value (127+1) = 50%
     switch(note){
