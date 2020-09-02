@@ -174,7 +174,7 @@ void main(void)
     toneA3(13,4);
     _delay_ms(250);
 
-    toneA3(13,4);
+    toneA3(13,2);
     toneA3(13,8);
     toneA3(15,4);
     toneA3(13,4);
