@@ -186,7 +186,6 @@ void tonePA3Slur(uint8_t note,uint8_t time){
         break;
     }
     TM2C = 0x00; PA |= (1<<BUZZER_BIT);
-    _delay_ms(5);
 }
 
 #endif
