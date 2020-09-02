@@ -5,7 +5,6 @@
 #define TARGET_VDD 4.0
 
 #define BUZZER_BIT        3     // Buzzer is placed on the PA3 pin (Port A, Bit 3), which is also TM2PWM
-#define LED_BIT           5     // LED is placed on the PA5 pin (Port A, Bit 5)
 
 #include <pdk/device.h>
 #include <stdint.h>
@@ -62,7 +61,7 @@ void toneA3(uint8_t note,uint8_t time){
         break;
     case 8:
         TM2S = tone_c5;
-
+        break;
     default:
         break;
     }
