@@ -27,7 +27,7 @@
 #define tone_g5 (uint8_t)(TM2S_SCALE_DIV24)|TM2S_PRESCALE_NONE
 #define tone_a5 (uint8_t)(TM2S_SCALE_DIV22)|TM2S_PRESCALE_NONE
 #define tone_b5 (uint8_t)(TM2S_SCALE_DIV20)|TM2S_PRESCALE_NONE
-#define tone_c6 (uint8_t)(TM2S_SCALE_DIV19)|TM2S_PRESCALE_NONE
+#define tone_c6 (uint8_t)(TM2S_SCALE_DIV18)|TM2S_PRESCALE_NONE
 
 //stop the note
 void noTone(void){
